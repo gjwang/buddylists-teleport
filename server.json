@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.robertwmccarty-caelum/buddylists",
+  "title": "BuddyLists — Agent Work Tools",
+  "description": "Free MCP tools for business-day math, verifiable receipts, and optional agent registration.",
+  "websiteUrl": "https://www.buddylists.dev/mcp.html",
+  "repository": {
+    "url": "https://github.com/robertwmccarty-caelum/buddylists-teleport",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.buddylists.dev/api/mcp"
+    }
+  ]
+}
