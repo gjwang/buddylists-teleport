@@ -156,7 +156,9 @@ def verify_receipt(receipt: dict, expected_public_key_b64: str | None = None) ->
 
     if not hash_ok or fields_match is False:
         verdict = "TAMPERED"
-    elif signed and signature.get("ok") is False:
+    elif signed and (
+        signature.get("checked") is not True or signature.get("ok") is not True
+    ):
         verdict = "BAD_SIGNATURE"
     elif not signed:
         verdict = "OK_UNSIGNED"
